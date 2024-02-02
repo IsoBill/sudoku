@@ -7,6 +7,8 @@ const read = () => {
   // return slc1.map((el) => el.split(''));
 };
 
+console.log (read())
+
 module.exports = {
   read,
 };
