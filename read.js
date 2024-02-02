@@ -2,10 +2,12 @@ const fs = require('fs');
 const { EOL } = require('os');
 
 const read = () => {
-  return fs.readFileSync('./puzzles.txt', 'utf-8').slice(0, 82).replaceAll('-', '0').trim().split('');
+  return fs.readFileSync('./puzzles.txt', 'utf-8').slice(0, 82).replaceAll('-', '0').trim().split('').map((el) => Number(el));
   // const slc1 = slc.match(/.{9}|./g);
   // return slc1.map((el) => el.split(''));
 };
+
+// console.log(read())
 
 module.exports = {
   read,
